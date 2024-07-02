@@ -12,7 +12,10 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [],
+    "defineConstraints": [
+        "UNITY_EDITOR || DEVELOPMENT_BUILD || DEVELOPER_FEATURES",
+        "!HEADLESS"
+    ],
     "versionDefines": [],
     "noEngineReferences": false
 }
