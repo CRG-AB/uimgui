@@ -85,12 +85,19 @@ namespace UImGui
 		private bool _isChangingCamera = false;
 
 		public CommandBuffer CommandBuffer => _renderCommandBuffer;
+		
+		private string _iniFileName = null;
 
 		#region Events
 		public event System.Action<UImGui> Layout;
 		public event System.Action<UImGui> OnInitialize;
 		public event System.Action<UImGui> OnDeinitialize;
 		#endregion
+
+		public void SetIniFileName(string fileName)
+		{
+			_iniFileName;
+		}
 
 		public void Reload()
 		{
@@ -171,6 +178,11 @@ namespace UImGui
 			_context.TextureManager.Initialize(io);
 
 			IPlatform platform = PlatformUtility.Create(_platformType, _cursorShapes, _iniSettings);
+			if (_iniSettings == null && !string.IsNullOrEmpty(_iniFileName))
+			{
+				io.SetIniFilename(_iniFileName);
+			}
+
 			SetPlatform(platform, io);
 			if (_platform == null)
 			{
