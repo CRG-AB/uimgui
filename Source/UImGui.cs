@@ -96,7 +96,7 @@ namespace UImGui
 
 		public void SetIniFileName(string fileName)
 		{
-			_iniFileName;
+			_iniFileName = fileName;
 		}
 
 		public void Reload()
