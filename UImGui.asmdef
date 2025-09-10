@@ -15,7 +15,7 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [
-        "UNITY_EDITOR || DEVELOPMENT_BUILD || DEVELOPER_FEATURES",
+        "UNITY_EDITOR || DEVELOPMENT_BUILD || ENABLE_DEVELOPER_FEATURES",
         "!UNITY_SERVER"
     ],
     "versionDefines": [
