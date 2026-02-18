@@ -5,11 +5,10 @@ PluginImporter:
   serializedVersion: 2
   iconMap: {}
   executionOrder: {}
-  "defineConstraints": [
-      "UNITY_EDITOR || DEVELOPMENT_BUILD || ENABLE_DEVELOPER_FEATURES",
-      "!UNITY_SERVER",
-      "!UIMGUI_REMOVE_IMGUIZMO"
-  ]
+  defineConstraints:
+  - UNITY_EDITOR || DEVELOPMENT_BUILD || ENABLE_DEVELOPER_FEATURES
+  - '!UNITY_SERVER'
+  - '!UIMGUI_REMOVE_IMGUIZMO'
   isPreloaded: 0
   isOverridable: 1
   isExplicitlyReferenced: 0
